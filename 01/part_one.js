@@ -10,12 +10,14 @@ function move_dial() {
         if(!input[i]) continue;
 
         let rotation = input[i];
-        let shift = parseInt(rotation.substring(1, rotation.length)) % 100;
+        let shift = parseInt(rotation.substring(1)) % 100;
 
-        if(rotation[0] == "L") {
+        let direction = rotation[0];
+
+        if(direction == "L") {
             dial = (dial - shift + 100) % 100;
             
-        } else if(rotation[0] == "R") {
+        } else if(direction == "R") {
             dial = (dial + shift + 100) % 100;
         }
 
