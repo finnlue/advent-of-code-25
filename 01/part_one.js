@@ -21,9 +21,7 @@ function move_dial() {
             dial = (dial + shift + 100) % 100;
         }
 
-        if(dial == 0) {
-            count_zeroes++;
-        }
+        if(dial == 0) count_zeroes++;
 
     }
     
